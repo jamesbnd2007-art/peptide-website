@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peptide Lab – Research Peptides</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Age verification overlay -->
+  <div id="age-overlay" class="overlay">
+    <div class="overlay-content">
+      <h2>Age Verification</h2>
+      <p>This site sells research peptides and is restricted to users over 18 years of age. Our products are supplied strictly for laboratory research purposes.</p>
+      <div class="overlay-buttons">
+        <button id="btn-age-yes" class="btn">I am 18&nbsp;+ and agree</button>
+        <button id="btn-age-no" class="btn btn-secondary">I am under 18</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header navigation -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Peptide&nbsp;Lab</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="cart-item"><a href="cart.html"><img src="images/cart.svg" alt="Cart" class="icon"><span id="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero" style="background-image: url('images/hero.png');">
+      <div class="overlay-light"></div>
+      <div class="hero-content container">
+        <h1>Premium Research Peptides</h1>
+        <p>High‑purity peptides for scientific and laboratory use only.</p>
+        <a href="products.html" class="btn btn-primary">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- Features section -->
+    <section class="features">
+      <div class="container">
+        <h2>Why Choose Us</h2>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <img src="images/flask.svg" alt="High quality" class="feature-icon">
+            <h3>High Quality</h3>
+            <p>Our peptides are manufactured to stringent quality standards to ensure exceptional purity and consistency.</p>
+          </div>
+          <div class="feature-item">
+            <img src="images/flask.svg" alt="Research only" class="feature-icon">
+            <h3>For Research Only</h3>
+            <p>All products are labelled “for laboratory research use only” and are not intended for human consumption or therapeutic use.</p>
+          </div>
+          <div class="feature-item">
+            <img src="images/flask.svg" alt="Fast shipping" class="feature-icon">
+            <h3>Fast Shipping</h3>
+            <p>We dispatch orders promptly and discreetly so you can continue your experiments without delay.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Callout section -->
+    <section class="callout">
+      <div class="container callout-inner">
+        <h2>Explore Our Collections</h2>
+        <p>From BPC‑157 to CJC‑1295, find peptides for your scientific experiments.</p>
+        <a href="products.html" class="btn btn-secondary">View Products</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy;&nbsp;2025 Peptide&nbsp;Lab. All rights reserved. Products are for laboratory research use only. Not for human consumption.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

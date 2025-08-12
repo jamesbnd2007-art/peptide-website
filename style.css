@@ -1,0 +1,465 @@
+/*
+  Global styles for the Peptide Lab website
+  Simple responsive design with a clean colour palette.
+*/
+
+/* CSS variables for easy theming */
+:root {
+  --primary: #0a5ad2;
+  --primary-dark: #0848a1;
+  --secondary: #048abf;
+  --secondary-dark: #03628e;
+  --light: #ffffff;
+  --gray-light: #f5f7fa;
+  --gray: #eaeaea;
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: var(--light);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header {
+  background: var(--light);
+  border-bottom: 1px solid var(--gray);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-list li a {
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-list li a:hover {
+  color: var(--primary);
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: -0.1rem;
+  fill: currentColor;
+}
+
+.cart-item {
+  position: relative;
+}
+
+#cart-count {
+  margin-left: 0.25rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  color: var(--light);
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.overlay-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 0;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--light);
+  border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: var(--light);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: var(--light);
+}
+
+/* Features section */
+.features {
+  padding: 4rem 0;
+  background: var(--gray-light);
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 1rem;
+  background: var(--light);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+  fill: var(--primary);
+}
+
+.feature-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+}
+
+/* Callout section */
+.callout {
+  background: var(--primary);
+  color: var(--light);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.callout h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.callout p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.callout .btn {
+  border-color: var(--light);
+}
+
+.callout .btn:hover {
+  background: var(--light);
+  color: var(--primary);
+}
+
+/* Footer */
+footer {
+  background: var(--gray-light);
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+  border-top: 1px solid var(--gray);
+}
+
+/* Age verification overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay-content {
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-content h2 {
+  margin-bottom: 1rem;
+}
+
+.overlay-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.overlay-buttons .btn {
+  margin: 0.25rem;
+}
+
+/* Product list page */
+.product-list {
+  padding: 3rem 0;
+}
+
+.product-list h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.product-list p.description {
+  margin-bottom: 2rem;
+  color: #555;
+  font-size: 0.95rem;
+  max-width: 700px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: var(--light);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.product-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.product-card .price {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.product-card .btn {
+  width: 100%;
+}
+
+/* Cart page */
+.cart-container {
+  padding: 3rem 0;
+}
+
+.cart-container h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.cart-items {
+  margin-bottom: 2rem;
+}
+
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.cart-item-row img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-details h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.cart-item-details .price {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.cart-item-actions button {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+
+.cart-item-actions button:hover {
+  color: var(--primary);
+}
+
+.cart-summary {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.checkout-btn {
+  margin-top: 1rem;
+}
+
+/* Contact page */
+.contact-container {
+  padding: 3rem 0;
+}
+
+.contact-container h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  width: auto;
+}

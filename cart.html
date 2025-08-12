@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart – Peptide Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Age overlay reused -->
+  <div id="age-overlay" class="overlay">
+    <div class="overlay-content">
+      <h2>Age Verification</h2>
+      <p>This site sells research peptides and is restricted to users over 18 years of age. Our products are supplied strictly for laboratory research purposes.</p>
+      <div class="overlay-buttons">
+        <button id="btn-age-yes" class="btn btn-primary">I am 18&nbsp;+ and agree</button>
+        <button id="btn-age-no" class="btn btn-secondary">I am under 18</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Peptide&nbsp;Lab</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="cart-item"><a href="cart.html"><img src="images/cart.svg" alt="Cart" class="icon"><span id="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cart-container container">
+      <h1>Your Cart</h1>
+      <div class="cart-items">
+        <!-- Cart items will be injected here by script.js -->
+      </div>
+      <div class="cart-summary">
+        <!-- Total will appear here -->
+      </div>
+      <div class="checkout">
+        <p>Please note that checkout is currently for demonstration purposes. Contact us to arrange payment for your research materials.</p>
+        <a href="contact.html" class="btn btn-primary checkout-btn">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy;&nbsp;2025 Peptide&nbsp;Lab. All rights reserved. Products are for laboratory research use only. Not for human consumption.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

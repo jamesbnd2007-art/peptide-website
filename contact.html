@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – Peptide Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Age overlay reused -->
+  <div id="age-overlay" class="overlay">
+    <div class="overlay-content">
+      <h2>Age Verification</h2>
+      <p>This site sells research peptides and is restricted to users over 18 years of age. Our products are supplied strictly for laboratory research purposes.</p>
+      <div class="overlay-buttons">
+        <button id="btn-age-yes" class="btn btn-primary">I am 18&nbsp;+ and agree</button>
+        <button id="btn-age-no" class="btn btn-secondary">I am under 18</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Peptide&nbsp;Lab</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="cart-item"><a href="cart.html"><img src="images/cart.svg" alt="Cart" class="icon"><span id="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-container container">
+      <h1>Contact Us</h1>
+      <p style="max-width: 700px; margin-bottom: 1.5rem;">Have questions about our peptides or need assistance with an order? Please fill out the form below or email us directly at <a href="mailto:research@peptidelab.com">research@peptidelab.com</a>. We'll get back to you as soon as possible.</p>
+      <div class="contact-form">
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been received.'); this.reset();">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" placeholder="Your message" required></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy;&nbsp;2025 Peptide&nbsp;Lab. All rights reserved. Products are for laboratory research use only. Not for human consumption.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
